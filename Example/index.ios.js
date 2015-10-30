@@ -24,7 +24,8 @@ class Example extends React.Component {
       quality: 0.5,
       storageOptions: {
         skipBackup: true
-      }
+      },
+      noData: true
     };
 
     UIImagePickerManager.showImagePicker(options, (didCancel, response) => {
