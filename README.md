@@ -5,7 +5,7 @@ A React Native module that allows you to use the native UIImagePickerController 
 **Requires iOS 8 or higher**
 
 ## Install
-1. `npm install react-native-image-picker@latest --save`
+1. `npm install react-native-image-picker-with-bytes@latest --save`
 2. In the XCode's "Project navigator", right click on your project's Libraries folder ➜ `Add Files to <...>`
 3. Go to `node_modules` ➜ `react-native-image-picker` ➜ select the `UIImagePickerManager` folder **Make sure you have 'Create Groups' selected**
 4. Make sure `UIImagePickerManager.m` is listed under 'Compile Sources' in your project's 'Build Phases' tab
@@ -49,6 +49,7 @@ var UIImagePickerManager = require('NativeModules').UIImagePickerManager;
   // response.uri is the uri to the local file asset on the device
   // response.isVertical will be true if the image is vertically oriented
   // response.width & response.height give you the image dimensions
+  // response.bytes returns the byte size of the image
   UIImagePickerManager.showImagePicker(options, (didCancel, response) => {
     console.log('Response = ', response);
 
